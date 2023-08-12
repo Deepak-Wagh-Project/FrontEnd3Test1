@@ -8,6 +8,10 @@ const noResults=document.createElement('div');
  noResults.className="noResults";
 noResults.innerText="No results found"
 loader.className="loader";
+let apiKeyError=document.createElement("div");
+apiKeyError.className="api-Key-Error";
+apiKeyError.innerText="*Please enter valid api key";
+const apiContainer=document.getElementById("apiContainer");
 
 
  async function searchMovie(){
@@ -21,7 +25,8 @@ loader.className="loader";
     const response= await fetch(url,{method:"GET"});
    
     if(response.status>=400){
-        alert('Please check api key');
+       
+        apiContainer.append(apiKeyError);
         apiKeyBox.value='';
         loader.remove();
         return;
@@ -30,7 +35,7 @@ loader.className="loader";
     
     const actualMovieList=movieList.Search
     if(actualMovieList===undefined){
-     
+      
         movieSearchBox.value='';
         loader.remove();
         movieContainer.append(noResults);
@@ -65,5 +70,8 @@ loader.className="loader";
     
     
  }
+ apiKeyBox.addEventListener("click",()=>{
+  apiKeyError.remove();
+ })
 
 
