@@ -14,13 +14,14 @@ color: #1c4258; /* Make the text transparent */
 
 }
 .input{
-    width: 90%;
+width: 90%;
 height: 10%;
 flex-shrink: 0;
 border-radius: 8px;
 background: #3A3F47;
 padding: 4px;
 margin: 8px;
+color:white;
 }
 button{
     color:grey;
@@ -106,7 +107,7 @@ button:hover{
    margin-left: 450%;
   }
   .noResults{
-    color: grey;
+    color: white;
     font-size: 25px;
   }
 
