@@ -119,5 +119,8 @@ button:hover{
         row-gap: 2%;
         
     }
+      .loader{
+      margin-left: 100%;
+    }
   }
 
