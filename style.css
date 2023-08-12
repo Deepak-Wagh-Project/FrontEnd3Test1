@@ -105,5 +105,8 @@ button:hover{
     animation: loader 1s linear infinite;
    margin-left: 450%;
   }
-  
+  .noResults{
+    color: grey;
+    font-size: 25px;
+  }
 
