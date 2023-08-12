@@ -3,8 +3,12 @@ const baseUrl=`https://www.omdbapi.com/`
 const movieContainer=document.getElementById("movieContainer");
 const apiKeyBox = document.getElementById("apiKey-Search-Box")
 const movieSearchBox=document.getElementById("movie-Name-Search-Box");
-const loader=document.createElement('div')
+const loader=document.createElement('div');
+const noResults=document.createElement('div');
+ noResults.className="noResults";
+noResults.innerText="No results found"
 loader.className="loader";
+
 
  async function searchMovie(){
     movieContainer.innerHTML=``;
@@ -26,9 +30,10 @@ loader.className="loader";
     
     const actualMovieList=movieList.Search
     if(actualMovieList===undefined){
-        alert("Please check movie name");
+      //  alert("Please check movie name");
         movieSearchBox.value='';
         loader.remove();
+        movieContainer.append(noResults);
         return;
     }
   
