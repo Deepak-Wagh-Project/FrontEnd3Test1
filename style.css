@@ -5,23 +5,23 @@ h1{
   /*  color: #1c4258;*/
 text-align: center;
 font-family: Montserrat;
-font-size: 64px;
+
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-width: 90%;
-color: #1c4258; /* Make the text transparent */
+width: 80%;
+color: hwb(202 5% 40%); /* Make the text transparent */
 
 }
 .input{
-width: 90%;
+    width: 80%;
 height: 10%;
 flex-shrink: 0;
 border-radius: 8px;
 background: #3A3F47;
 padding: 4px;
 margin: 8px;
-color:white;
+color: white;
 }
 button{
     color:grey;
@@ -34,6 +34,7 @@ button{
     display: grid;
     grid-template-columns: 17% 17% 17% 17% 17%;
     justify-content: space-between;
+    row-gap: 5%;
 }
 .movie-container .movie-details{
   display: flex;
@@ -109,5 +110,14 @@ button:hover{
   .noResults{
     color: white;
     font-size: 25px;
+  }
+  @media screen and (min-width:320px) and (max-width:480px) {
+    .movie-container{
+        display: grid;
+        grid-template-columns: 47% 47%;
+        justify-content: space-between;
+        row-gap: 2%;
+        
+    }
   }
 
