@@ -24,7 +24,7 @@ margin: 0.5% 0.5%;
 color: white;
 }
 button{
-    height: 40px;
+  height: 40px;
   width: 100px;
     color:grey;
     background-color: red;
@@ -125,5 +125,15 @@ button:hover{
     .loader{
       margin-left: 100%;
     }
+  }
+  #apiContainer{
+    display: flex;
+    flex-direction: column;
+   
+  }
+ .api-Key-Error{
+       color: gray;
+       margin-left: 5px;
+       
   }
 
