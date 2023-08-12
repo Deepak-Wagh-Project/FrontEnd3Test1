@@ -30,7 +30,7 @@ loader.className="loader";
     
     const actualMovieList=movieList.Search
     if(actualMovieList===undefined){
-      //  alert("Please check movie name");
+     
         movieSearchBox.value='';
         loader.remove();
         movieContainer.append(noResults);
