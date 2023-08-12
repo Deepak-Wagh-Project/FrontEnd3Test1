@@ -15,7 +15,7 @@ color: hwb(202 5% 40%); /* Make the text transparent */
 }
 .input{
     width: 98%;
-height: 10%;
+height: 30px;
 flex-shrink: 0;
 border-radius: 8px;
 background: #3A3F47;
@@ -24,6 +24,8 @@ margin: 0.5% 0.5%;
 color: white;
 }
 button{
+    height: 40px;
+  width: 100px;
     color:grey;
     background-color: red;
     border-radius: 10px;
