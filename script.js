@@ -1,4 +1,4 @@
-
+//if you dont have apikey use this one - "fedb3ccb"
 const baseUrl=`https://www.omdbapi.com/`
 const movieContainer=document.getElementById("movieContainer");
 const apiKeyBox = document.getElementById("apiKey-Search-Box")
