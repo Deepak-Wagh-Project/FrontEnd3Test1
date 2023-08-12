@@ -9,18 +9,18 @@ font-family: Montserrat;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-width: 80%;
+width: 100%;
 color: hwb(202 5% 40%); /* Make the text transparent */
 
 }
 .input{
-    width: 80%;
+    width: 98%;
 height: 10%;
 flex-shrink: 0;
 border-radius: 8px;
 background: #3A3F47;
 padding: 4px;
-margin: 8px;
+margin: 0.5% 0.5%;
 color: white;
 }
 button{
@@ -32,8 +32,8 @@ button{
 }
 .movie-container{
     display: grid;
-    grid-template-columns: 17% 17% 17% 17% 17%;
-    justify-content: space-between;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    column-gap: 2.3%;
     row-gap: 5%;
 }
 .movie-container .movie-details{
@@ -44,11 +44,12 @@ button{
 
 }
 .movie-container img{
-    width: 80%;
-    height:100% ;
+
+    width: 100%;
+    
 }
 .movie-container .movie-title{
-  width: 80%;
+  width: 100%;
 }
 .details-container{
     display: flex;
@@ -119,7 +120,7 @@ button:hover{
         row-gap: 2%;
         
     }
-      .loader{
+    .loader{
       margin-left: 100%;
     }
   }
