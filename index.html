@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <head><h1>IMDB MOVIE APP</h1></head>
+    <div class="main"> <div class="search-container">
+          <div class="api-input">
+            <input type="text" id="apiKey-Search-Box" class="input" placeholder="API_KEY">
+           </div>
+           <div class="movie-name-input">
+            <input type="text" id="movie-Name-Search-Box" class="input" placeholder="Search">
+           </div>
+          <div class="search-button">
+            <button onclick="searchMovie()"> Search</button>
+        </div>
+    </div>
+    <div class="movie-container" id="movieContainer">
+        <div class="movie-details"> 
+            <div class="img-container"><img src="" alt=""></div>
+            <div class="details-container"> <div class="movie-title">Rab ne banadi jodi</div>
+            <div class="movie-release-year">
+                2011
+            </div>
+            <a href=""><div class="more-details">More details</div> 
+            <div class="arrow"><span class="material-symbols-outlined">
+                open_in_new
+                </span></div></a> </div>
+        </div>
+       </div>
+</div>
+   <script src="script.js"></script> 
+</body>
+</html>
