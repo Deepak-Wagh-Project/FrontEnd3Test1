@@ -1,4 +1,4 @@
-//const apiKey=`fedb3ccb`;
+
 const baseUrl=`https://www.omdbapi.com/`
 const movieContainer=document.getElementById("movieContainer");
 const apiKeyBox = document.getElementById("apiKey-Search-Box")
@@ -7,6 +7,7 @@ const loader=document.createElement('div')
 loader.className="loader";
 
  async function searchMovie(){
+    movieContainer.innerHTML=``;
     movieContainer.append(loader);
     
   const apiKey=apiKeyBox.value.trim();
@@ -14,18 +15,32 @@ loader.className="loader";
 
     const url=`https://www.omdbapi.com/?s=${movieName}&apikey=${apiKey}`
     const response= await fetch(url,{method:"GET"});
+   
+    if(response.status>=400){
+        alert('Please check api key');
+        apiKeyBox.value='';
+        loader.remove();
+        return;
+    }
     const movieList=await response.json();
+    
     const actualMovieList=movieList.Search
-   // console.log(actualMovieList);
+    if(actualMovieList===undefined){
+        alert("Please check movie name");
+        movieSearchBox.value='';
+        loader.remove();
+        return;
+    }
+  
    movieContainer.innerHTML=``;
-   console.log(actualMovieList);
+
     for(let i=0;i<actualMovieList.length;i++){
      
         addMovieName(actualMovieList[i]);
     }
  }
  function addMovieName(movie){
-    console.log(movie);
+   
     let image=movie.Poster;
     if(image==="N/A"){
         image="NoImage.png"
@@ -46,4 +61,4 @@ loader.className="loader";
     
  }
 
-// searchMovie("-Holmes");
+
